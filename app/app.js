@@ -15,5 +15,9 @@ app.config(function($routeProvider){
 			controller: 'ButtonsCtrl',
 			templateUrl: '/bootstrap/app/views/buttonDemoCtrl.html'
 		})
+		.when('/carousel', {
+			controller: 'CarouselDemoCtrl',
+			templateUrl: '/bootstrap/app/views/carouselDemoCtrl.html'
+		})
 		.otherwise({redirectTo: '/'});
 });
