@@ -11,5 +11,9 @@ app.config(function($routeProvider){
 			controller: 'AlertDemoCtrl',
 			templateUrl: '/bootstrap/app/views/alertDemoCtrl.html'
 		})
+		.when('/button', {
+			controller: 'ButtonsCtrl',
+			templateUrl: '/bootstrap/app/views/buttonDemoCtrl.html'
+		})
 		.otherwise({redirectTo: '/'});
 });
