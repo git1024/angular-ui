@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="bootstrapApp">
+	<head>
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Ejemplos Bootstrap</title>
+
+	    <!-- Bootstrap -->
+    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  </head>
+<body>
+	<div class="navbar navbar-inner navbar-default " role="navigation" data-ng-controller="NavbarController">
+		 <div class="container">
+			 <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="#/" title='Your choice, your world!'>Home</a>
+	        </div>
+
+		
+			<div class="navbar-collapse collapse" data-collapse="isCollapsed">        
+		        <ul class="nav navbar-nav">
+		            <li data-ng-class="{'active':getClass('/accordion')}"><a href="#/accordion">Accordion</a></li>
+		            <li data-ng-class="{'active':getClass('/alert')}"><a href="#/alert">Alert</a></li>
+		        </ul>
+		    </div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div ng-view=""></div>
+	</div>
+	
+	
+	
+   <!-- Vendor Libs: jQuery only used for Bootstrap functionality -->
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <!-- UI Libs -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui-bootstrap.js"></script>
+
+    <script src="app/app.js"></script>
+	<script src="app/controllers/navbarController.js"></script>
+	<script src="app/controllers/accordionDemoCtrl.js"></script>
+	<script src="app/controllers/alertDemoCtrl.js"></script>
+	
+</body>
+</html>
