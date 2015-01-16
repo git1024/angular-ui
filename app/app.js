@@ -19,5 +19,9 @@ app.config(function($routeProvider){
 			controller: 'CarouselDemoCtrl',
 			templateUrl: '/bootstrap/app/views/carouselDemoCtrl.html'
 		})
+		.when('/collapse',  {
+			controller: 'CollapseDemoCtrl',
+			templateUrl: '/bootstrap/app/views/collapseDemoCtrl.html'
+		})
 		.otherwise({redirectTo: '/'});
 });
